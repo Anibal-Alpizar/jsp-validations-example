@@ -1,6 +1,6 @@
 Practical JSP example of validations using: <br>
 
--tailwind css <br>
+-Tailwind css <br>
 -Model <br>
 -Controller <br>
 
