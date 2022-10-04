@@ -1,0 +1,67 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Title</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+    </h:head>
+    <h:body class="bg-blue-500">
+        <div>
+            <div class="bg-white mx-auto text-center w-1/2 py-5 shadow-xl rounded-3x1 my-96 max-w-2x1">
+                <h2 class="text-4xl font-semibold border-b pb-2 mx-6" >Buscar auto</h2>
+                <h:form>
+                    <div class="grid grid-cols-2 gap-4 my-5 mx-8"> 
+                        <h:outputLabel class="text-xl flex items-center"> Marca: </h:outputLabel>
+                        <h:selectOneMenu class="w-full p-1 border-2 placeholder-blue-800 border-blue-700 appearance-none rounded-lg focus:outline-none focus:ring-2 ">
+                            <f:selectItems value="#{beanLlenadoMarcas.listaMarcas}"/>
+                        </h:selectOneMenu>
+
+                        <h:outputLabel class="text-xl flex items-center"> Modelo: </h:outputLabel>
+                        <h:inputText class="w-full p-1 border-2 placeholder-blue-800 border-blue-700 appearance-none rounded-lg focus:outline-none focus:ring-2 " value="#{VehiculoBean.modelo}"/>
+
+                        <h:outputLabel class="text-xl flex items-center"> Estilo: </h:outputLabel>
+                        <h:selectOneMenu class="w-full p-1 border-2 placeholder-blue-800 border-blue-700 appearance-none rounded-lg focus:outline-none focus:ring-2 ">
+                            <f:selectItems value="#{beanLlenadoEstilos.listaEstilos}"/>
+                        </h:selectOneMenu>
+
+                        <h:outputLabel class="text-xl flex items-center"> Combustible: </h:outputLabel>
+                        <h:selectOneMenu class="w-full p-1 border-2 placeholder-blue-800 border-blue-700 appearance-none rounded-lg focus:outline-none focus:ring-2 ">
+                            <f:selectItems value="#{beanLlenadoCombustible.listaCombustible}"/>
+                        </h:selectOneMenu>
+
+                        <h:outputLabel class="text-xl flex items-center"> Financiamiento: </h:outputLabel>
+                        <h:selectOneMenu class="w-full p-1 border-2 placeholder-blue-800 border-blue-700 appearance-none rounded-lg focus:outline-none focus:ring-2 ">
+                            <f:selectItems value="#{beanLlenadoFinanciamiento.listaFinanciamientos}"/>
+                        </h:selectOneMenu>
+                        <h:outputLabel class="text-xl flex items-center"> Año entre: </h:outputLabel>
+                        <h:selectOneMenu class="w-full p-1 border-2 placeholder-blue-800 border-blue-700 appearance-none rounded-lg focus:outline-none focus:ring-2 ">
+                            <f:selectItems value="#{beanLlenadoAgnos.listaAgnosMenorMayor}"/>
+                        </h:selectOneMenu>
+                        <h:outputLabel> y </h:outputLabel>
+                        <h:selectOneMenu class="w-full p-1 border-2 placeholder-blue-800 border-blue-700 appearance-none rounded-lg focus:outline-none focus:ring-2 ">
+                            <f:selectItems value="#{beanLlenadoAgnos.listaAgnosMayorMenos}"/>
+                        </h:selectOneMenu>
+
+
+                        <h:outputLabel class="text-xl flex items-center"> Precio entre:  </h:outputLabel>
+                        <h:inputText class="w-full p-1 border-2 placeholder-blue-800 border-blue-700 appearance-none rounded-lg focus:outline-none focus:ring-2 "  value="#{VehiculoBean.precioInicial}"/>
+                        <h:outputLabel> y </h:outputLabel>
+                        <h:inputText class="w-full p-1 border-2 placeholder-blue-800 border-blue-700 appearance-none rounded-lg focus:outline-none focus:ring-2 " value="#{VehiculoBean.precioFinal}"/>
+
+
+                        <h:outputLabel class="text-xl flex items-center"> Ordenar por: </h:outputLabel>
+                        <h:selectOneMenu class="w-full p-1 border-2 placeholder-blue-800 border-blue-700 appearance-none rounded-lg focus:outline-none focus:ring-2 ">
+                            <f:selectItems value="#{beanLlenadoOrdenados.listaOrdenados}"/>
+                        </h:selectOneMenu>
+
+                        <h:commandButton class="bg-blue-300 text-xl font-semibold px-4 py rounded-lg hover:bg-blue-800 hover:text-white" value="Buscar" actionListener="#{VehiculoBean.metodoVerNulos()}"></h:commandButton>
+                        <h:inputTextarea class="w-full p-1 border-2 placeholder-blue-800 border-blue-700 appearance-none rounded-lg focus:outline-none focus:ring-2 " value="#{VehiculoBean.mensaje}"></h:inputTextarea>           
+                    </div>
+                </h:form>
+            </div>
+        </div>
+    </h:body>
+</html>
+

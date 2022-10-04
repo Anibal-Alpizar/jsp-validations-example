@@ -1,0 +1,15 @@
+Controller\beanLlenadoMarcas.class
+Controller\beanLlenadoCombustibles.class
+Model\AgnosModelo.class
+Controller\beanLlenadoAgnos.class
+com\mycompany\jspcombos\resources\JavaEE8Resource.class
+Controller\beanLlenadoFinanciamientos.class
+Controller\beanLlenadoEstilos.class
+Controller\beanLlenadoOrdenados.class
+com\mycompany\jspcombos\JAXRSConfiguration.class
+Model\EstilosModelo.class
+Model\MarcasModelo.class
+Model\CombustiblesModelo.class
+Model\FinanciamientosModelo.class
+Controller\VehiculoBean.class
+Model\OrdenadosModelo.class
